@@ -1,0 +1,1156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: none;
+  background-color: #0f0303;
+  background-attachment: fixed;
+     background-repeat: no-repeat; 
+       background-size: cover; 
+}
+
+main {
+  /* 1. Adicionámos as cores do gradiente corretamente */
+  /* 2. Removemos a barra inicial do caminho da imagem para evitar erros de diretório */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.966), rgba(0, 0, 0, 0.925)), url("/IMG/foto.jpg");
+  
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 25%; 
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+/* HEADER */
+
+        /* User Header CSS adapted with modern enhancements */
+        cabeçalho, header.header-container {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px 0 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+            
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-left: 50px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-size: 18px;
+            color: orangered;
+            font-weight: 600;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 4px;
+        }
+
+        .menu a:hover, .menu a.active {
+            color: white;
+            border-bottom: 2px solid red;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: orangered;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+           
+        /* Media Query for Mobile Devices */
+        @media (max-width: 900px) {
+            cabeçalho, header.header-container {
+                padding: 0 20px;
+            }
+
+
+            body{
+    font-family: Arial, Helvetica, sans-serif;
+ background-image: none;
+ background-color: #0f0303;
+ background-attachment: fixed;
+    background-repeat: no-repeat; 
+      background-size: cover;  
+}
+            
+main{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.509)), url("/IMG/1791074491250.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 20%; /* Força a imagem a alinhar-se mais ao topo, mostrando melhor o rosto */
+    /* Ou pode usar coordenadas exatas, por exemplo: background-position: 50% 20%; */
+    background-size: cover;
+     padding-top: 100px;
+   padding-bottom: 100px;
+
+}
+
+            .logo {
+                margin-left: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .menu {
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 100px);
+                background-color: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: right 0.4s ease-in-out;
+            }
+
+            .menu.active {
+                right: 0;
+            }
+
+            .menu a {
+                font-size: 24px;
+            }
+        }
+/* ====FIM DO HEADER====*/
+
+
+.inicio{
+     margin-top: 5%;
+}
+
+.inicio .p1{
+    color: orangered;
+    text-align: center;
+    border: 1px solid orangered;
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    font-size: large;
+     background: linear-gradient(rgba(2, 2, 2, 0.885));
+
+}
+.inicio .p2{
+    color: rgb(213, 196, 196);
+    text-align: center;
+    font-size: large;
+}
+
+.inicio .animacao{
+    text-transform: uppercase;
+    background: linear-gradient( 45deg, orangered, rgb(204, 9, 9), orangered);
+    background-size: 90% 400px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 8rem;
+    margin-top:5% ;
+    font-weight: 700;
+    animation: degrade 5s linear infinite alternate;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+       background-position:1900%;  
+    }
+}
+/*inicio media */
+@media( max-width:768px ){
+
+.inicio .p1{
+    color: orangered;
+    text-align: center;
+    border: 1px solid orangered;
+    padding: 10px;
+    width: 300px;
+    margin: auto;
+    font-size: large;
+  background: linear-gradient(rgba(2, 2, 2, 0.885));
+ }
+
+ 
+   .inicio h1{
+font-size: 5rem;
+color: white;
+   } 
+
+     .sobre{
+    display: block;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+    
+    
+}
+ 
+
+.inicio .animacao{
+    text-transform: uppercase;
+    background: linear-gradient( 45deg,orangered, rgb(243, 111, 111), orangered);
+    background-size: 90% 400px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 4rem;
+    margin-top:5%;
+    font-weight: 700;
+    animation: degrade 5s linear infinite alternate;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+       background-position:1900%;  
+    }
+}
+
+
+}
+/*inicio media */
+
+
+.botoes{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.botoes a{
+    padding: 15PX;
+    width: 200px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+     box-shadow: 0 0 10px rgb(255, 68, 0);
+}
+
+.botoes a:hover{
+   
+  background-color: #ff3300;
+ 
+  
+
+    
+}
+@media( max-width:768px ){
+    
+
+    .p2{
+    margin-top: 9%;
+    }
+
+.botoes{
+    margin-top: 9%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+
+}
+
+.botoes a{
+    padding: 15PX;
+    width: 200px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid orangered;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    border-radius: 9px;
+}
+
+}
+.texto{
+    text-align: center;
+    color: orangered;
+    margin-top: 8%;
+}
+
+
+.sobre{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+        gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+    
+}
+
+.grid-section{
+  display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.fotoPerfil{
+margin-left:10px ;
+position: relative;
+display: inline-block;
+}
+.caixa-experiencia{
+    position: absolute;
+    bottom: 80px;
+    right: -3px;
+    background-color:orangered;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+}
+
+.caixa-experiencia h3{
+    font-size: 1.2rem;
+    
+    margin: 0 0 3px 0;
+}
+.caixa-experiencia .texto2{
+    color: white;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: small;
+
+}
+
+.fotoPerfil img{
+width: 200px;
+height: 300px;
+border: 1px solid orangered;
+margin-top: 20px;
+  border-radius: 20px;
+  
+}
+
+.fotoPerfil img:hover{
+      transform: translateY(-8px);
+  border-color: orangered;
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.2);
+}
+.fotoPerfil .nome{
+    text-align: center;
+    font-size: 2rem;
+    color:white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+.sobreMim{
+    width: 50%;
+    height: 350px;
+    background: linear-gradient(rgba(2, 2, 2, 0.885));
+    border-radius: 20px;
+    border: 2px solid orangered;  
+}
+
+.sobreMim:hover{
+      transform: translateY(-8px);
+  border-color: orangered;
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.2);
+}
+    .sobreMim p{
+        font-size: 30px;
+        color: white;
+        line-height: 1.6;                 /* Altura da linha (espaçamento entre as linhas do parágrafo) */
+                /* Justifica o texto */
+    margin-bottom: 15px;
+    padding: 20px;
+
+    }
+
+
+    @media( max-width:768px ){
+
+        .fotoPerfil .nome{
+    text-align: center;
+    font-size: large;
+    color:white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.sobreMim{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(2, 2, 2, 0.885));
+    border-radius: 20px;
+    border: 2px solid orangered;
+
+    
+}
+
+    .sobreMim p{
+        font-size: 20px;
+        color: white;
+        line-height: 1.6;                 /* Altura da linha (espaçamento entre as linhas do parágrafo) */              /* Justifica o texto */
+    
+    padding: 20px;
+
+    }
+    }
+    /*Habilidades*/
+
+    .habilidades p{
+          font-size: 20px;
+        color: white;
+        line-height: 1.9;                 /* Altura da linha (espaçamento entre as linhas do parágrafo) */             /* Justifica o texto */
+    margin-top: 10px;
+    padding: 20px;
+    }
+    .habilidades h3{
+        color:orangered;
+        padding: 5px;
+        text-align: center;
+        font-size: 2rem;
+        
+    }
+
+/* Layout Geral das Habilidades */
+.grid-habilidades {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card-hab {
+    background-color:rgb(68, 66, 66);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 130px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid orangered; /* Deixa preparado para a borda colorida */
+}
+
+.card-hab i {
+    font-size: 45px;
+    margin-bottom: 12px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.card-hab span {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    color: #ebe3e3;
+    font-size: 14px;
+}
+
+/* Efeito legal ao passar o mouse em cima do card */
+.card-hab:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+
+
+nnnn
+/* ==========================================
+   CORES PERSONALIZADAS DE CADA TECNOLOGIA
+   ========================================== */
+
+/* HTML5 (Laranja) */
+.card-hab.html:hover { border-color: #e34f26; }
+.card-hab.html i { color: #e34f26; }
+
+/* CSS3 (Azul) */
+.card-hab.css:hover { border-color: #1572b6; }
+.card-hab.css i { color: #1572b6; }
+
+/* JavaScript (Amarelo) */
+.card-hab.js:hover { border-color: #f7df1e; }
+.card-hab.js i { color: #f7df1e; }
+
+/* React (Azul Ciano) */
+.card-hab.react:hover { border-color: #61dafb; }
+.card-hab.react i { color: #61dafb; }
+
+/* Next.js (Preto/Branco Minimalista) */
+.card-hab.nextjs:hover { border-color: #ea1313; }
+.card-hab.nextjs i { color: orangered; }
+
+/* Node.js (Verde) */
+.card-hab.nodejs:hover { border-color: #539e43; }
+.card-hab.nodejs i { color: #539e43; }
+
+/* Express.js (Cinza Escuro / Servidor) */
+.card-hab.express:hover { border-color: #800e21; }
+.card-hab.express i { color: rgb(26, 255, 0); }
+
+/* MySQL (Azul Golfinho / Banco Relacional) */
+.card-hab.mysql:hover { border-color: #00758f; }
+.card-hab.mysql i { color: #00758f; }
+
+/* NoSQL / MongoDB (Verde Folha) */
+.card-hab.nosql:hover { border-color: #47a248; }
+.card-hab.nosql i { color: #47a248; }
+
+/* Git (Vermelho/Laranja) */
+.card-hab.git:hover { border-color: #f05032; }
+.card-hab.git i { color: #f05032; }
+
+
+
+
+/*designer*/
+
+
+
+/* Estilo do Logo (Ps e Ai) dentro do card */
+.logo-adobe {
+    font-weight: 800;
+    font-size: 24px;
+    background-color: #1a1a1a; /* Fundo escuro igual aos programas da Adobe */
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Efeito de zoom no card ao passar o mouse */
+.card-hab:hover .logo-adobe {
+    transform: scale(1.08);
+}
+
+/* ==========================================
+   CORES PERSONALIZADAS DA ADOBE
+   ========================================== */
+
+/* Photoshop (Azul Céu) */
+.card-hab.photoshop:hover { 
+    border-color: #31a8ff; 
+}
+.card-hab.photoshop .logo-adobe { 
+    color: #31a8ff; 
+}
+
+/* Illustrator (Laranja Forte) */
+.card-hab.illustrator:hover { 
+    border-color: #ff9a00; 
+}
+.card-hab.illustrator .logo-adobe { 
+    color: #ff9a00; 
+}
+/*======Projectos============*/
+
+   /* --- Seção de Projetos --- */
+.projects-section {
+  padding: 80px 20px;
+   /* Fundo preto combinado com o portfólio */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: orangered; /* Cor dos seus títulos no portfólio */
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* --- Grid de Projetos --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Card de Projeto --- */
+.project-card {
+  background-color: #111111; /* Preto ligeiramente mais claro para contraste */
+  border: 1px solid #222222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+/* Efeito ao passar o mouse */
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: orangered;
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.2);
+}
+
+/* Imagem do Projeto */
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+
+@media (max-width: 768px) {
+/* Imagem do Projeto */
+.project-image img {
+  width: 100%;
+  height:  auto;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+}
+
+/* Conteúdo do Card */
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.project-content p {
+  font-size: 15px;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 72px;
+}
+
+/* Tags de Tecnologias */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  background-color: rgba(255, 69, 0, 0.15); /* Laranja translúcido */
+  color: orangered;
+  border: 1px solid rgba(255, 69, 0, 0.4);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Botões de Ação */
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary, .btn-secondary {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botão Principal */
+.btn-primary {
+  background-color: orangered;
+  color: #ffffff;
+  border: 1px solid orangered;
+}
+
+.btn-primary:hover {
+  background-color: #ff3300;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+}
+
+/* Botão Secundário */
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+.btn-secondary:hover {
+  border-color: orangered;
+  color: orangered;
+}
+
+
+
+/*======Serviços============*/
+
+.Servicos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  width: 100%;
+    height: auto;
+    padding: 30px;
+   
+}
+
+@media (max-width: 768px) {
+.Servicos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  
+  align-items: center;
+  width: 100%;
+    height: 800px;
+}
+
+ }
+
+.caixaServicos {
+  max-width: 600px;
+  margin-left: 5%;
+  
+}
+
+.Tipo-servicos {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.header-servico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header-servico h4 {
+  color: #ffffff;
+  margin: 0;
+}
+
+.icon {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* --- LÓGICA DA ANIMAÇÃO DE EXPANSÃO --- */
+.conteudo-wrapper {
+  display: grid;
+  grid-template-rows: 0fr; /* Inicia com altura zero */
+  transition: grid-template-rows 0.3s ease-out; /* Transição suave */
+}
+
+.conteudo-wrapper p {
+  overflow: hidden; /* Esconde o texto quando fechado */
+  margin: 0;
+  color: #aaaaaa;
+  font-size: 0.95rem;
+}
+
+/* ESTADO ATIVO/ABERTO */
+.Tipo-servicos.ativo {
+   border-color: orangered;
+  color: orangered;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5); /* Borda destacada */
+}
+
+.Tipo-servicos.ativo .conteudo-wrapper {
+  grid-template-rows: 1fr; /* Expande para a altura total do texto */
+}
+
+.Tipo-servicos.ativo .conteudo-wrapper p {
+  margin-top: 12px; /* Adiciona o espaço superior apenas quando aberto */
+}
+
+.Solicitar-servicos{
+    display: block;
+    width: 400px;
+    height: 400px;
+    background-color:  #1a1a1a;
+    border-radius: 9px; 
+    margin-right: 5%;
+
+}
+
+
+
+         .form-container h2{
+            color: #ffffff;
+            
+        }
+
+
+/* Contentor principal do formulário */
+        .form-container {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            padding: 40px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            margin-right: 7%;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+            background-color: #1a1a1a;
+            border: 1px solid orangered;
+            padding: 40px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            margin-left: 40px;
+        }  
+        }
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            
+        }
+
+        /* Estilo dos campos de input e textarea */
+        .form-group {
+            margin-bottom: 16px;
+            
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: #222222;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 15px;
+            box-sizing: border-box; /* Garante que o padding não estoure a largura */
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #666666;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+            
+        }
+
+        /* Botão de envio (Falar no WhatsApp) */
+        .btn-whatsapp {
+            width: 100%;
+            padding: 14px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+            margin-bottom: 32px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Caixas de informações de contacto abaixo */
+        .info-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            background-color: #222222;
+            border: 1px solid #333333;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #cccccc;
+            font-size: 14px;
+            gap: 12px;
+            cursor: pointer;
+        }
+        .info-box a{
+        color: #cccccc;
+        text-decoration: none;
+       }
+
+        /* Círculo do ícone do Bootstrap */
+        .info-box span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+
+/*======Footer============*/
+
+
+.futter{
+   width:100%; 
+   min-height: 88vh;
+   background-color: #000000;
+}
+
+.conteudo-pai{
+    gap: 50px;
+ display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  border-top: 1px solid #222 ;
+   
+}
+
+.filho{
+   
+    padding: 40px;
+    
+}
+
+.filho p{
+     color: rgb(165, 164, 164);
+    padding-top: 9px;
+    line-height: 1.6;              
+       /* Altura da linha (espaçamento entre as linhas do parágrafo) */
+    
+    
+}
+
+.filho h4{
+    color: white;
+    margin-bottom: 9px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #222;
+    text-align: center;
+    width: 100px;
+}
+
+.conteudo-final{
+    padding-top: 20px;
+    padding-bottom: 4%;
+    border-top: 1px solid #222 ;
+   background-color: black ;
+   display: block;
+   justify-content: center;
+   align-items: end;
+   margin: 0;
+   font-size: 1.5rem;
+  
+}
+.Botao-cv {
+margin: auto;
+display: flex;
+margin-top: 6px;
+padding-bottom: 2%;
+
+}
+
+.Botao-cv button{
+     padding: 10px  30px;
+     border-radius: 5px;
+    margin: auto;
+    border: none;
+    box-shadow: 0 0 10px orangered;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+    gap: 5%;
+}
+
+.social-icons i{
+    font-size: 2rem;
+    color: #e34f26;
+
+}
+.social-icons i:hover{
+    font-size: 2rem;
+    color: white;
+
+}
+.copyright{
+    color: #5c5c5c;
+    text-align: center;
+    margin-top: 20px;
+
+}
+    /* ========================================================== */
+    @media (max-width: 768px) {
+
+        .futter{
+   width:100%; 
+   margin-top: 450px;
+   background-color: black;
+
+}
+
+.conteudo-pai{
+
+ display: flex;
+  gap: 2px;
+  margin: 0 auto;
+  border-top: 1px solid #222 ;
+   
+}
+        .conteudo-pai{
+    display: grid;
+    margin-left: 20px;
+}
+ .filho{
+       
+    padding: 4px;
+    
+ }
+
+.filho p{
+    
+    padding-top: 9px;
+    
+}
+
+.filho h4{
+    
+    padding-top: 9px;
+    
+}
+
+   .conteudo-final{
+    width: 100%;
+    height:  200px;
+    border-top: 1px solid #222 ;
+   background-color: black ;
+   display: block;
+   justify-content: center;
+   align-items: end;
+   margin: 0;
+   font-size: 2rem;
+   
+
+   }
+
+ .social-icons{
+    display: flex;
+    align-items: center;
+     padding-top: 4%;
+    justify-content: center; 
+    gap: 5%;
+  }
+
+   .social-icons i{
+    font-size: 25px;
+    color: #e34f26;
+
+   }
+      .site-footer {
+        padding: 30px 15px 20px;
+      }
+
+      .btn-cv {
+        font-size: 0.95rem;
+        padding: 10px 22px;
+      }
+
+      .social-icons {
+        gap: 15px;
+      }
+
+      .social-link {
+        font-size: 1.25rem;
+      }
+
+      .copyright {
+        font-size: 0.85rem;
+     color: rgb(165, 164, 164); 
+        padding-bottom: 5%;
+      }
+}
